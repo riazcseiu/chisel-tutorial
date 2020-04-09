@@ -52,7 +52,12 @@ object Launcher {
         (c) => new AdderTests(c)
       }
     },
-    "DynamicMemorySearch" -> { (manager: TesterOptionsManager) =>
+    "Riaz" -> { (manager: TesterOptionsManager) =>
+      Driver.execute(() => new Riaz(8), manager) {
+        (c) => new RiazTests(c)
+      }
+    },
+   "DynamicMemorySearch" -> { (manager: TesterOptionsManager) =>
       Driver.execute(() => new DynamicMemorySearch(8, 4), manager) {
         (c) => new DynamicMemorySearchTests(c)
       }
